@@ -1,0 +1,9 @@
+{
+  "name": "NEWS app",
+  "short_name": "newsApp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "A PWA built with Vite and React"
+}
