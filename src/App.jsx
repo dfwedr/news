@@ -1,6 +1,6 @@
 import Header from "./components/Header/Header";
 import Main from "./pages/Main/Main";
-//новое
+
 function App() {
   return (
     <>
