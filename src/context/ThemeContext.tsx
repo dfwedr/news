@@ -21,10 +21,11 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState<boolean>(localStorage.getItem("isDark") === "true");
 
   const toggleTheme = () => {
     setIsDark((prev) => !prev);
+    localStorage.setItem("isDark", `${!isDark}`);
   };
   return <ThemeContext.Provider value={{ isDark, toggleTheme }}>{children}</ThemeContext.Provider>;
 };
