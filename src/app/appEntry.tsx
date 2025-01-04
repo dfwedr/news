@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
 import { store } from "./appStore";
-import BaseLayout from "./layouts/BaseLayout";
+import BaseLayout from "@/app/layouts/BaseLayout";
 
 import "@/shared/index.css";
 
