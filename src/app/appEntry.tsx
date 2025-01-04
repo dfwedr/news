@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
 import { store } from "./appStore";
 import BaseLayout from "@/app/layouts/BaseLayout";
-
+//
 import "@/shared/index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
