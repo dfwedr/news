@@ -1,7 +1,6 @@
 import Header from "@/widgets/header/ui/Header/Header";
 import { useTheme } from "@/app/providers/ThemeProvider";
 import MainPage from "@/pages/main/ui/MainPage";
-// import { MainPage } from "@/pages/main";
 
 function BaseLayout() {
   const { isDark } = useTheme();
