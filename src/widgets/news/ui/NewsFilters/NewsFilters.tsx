@@ -3,24 +3,24 @@ import styles from "./styles.module.css";
 import Slider from "@/features/slider/ui/Slider/Slider";
 import { setFilters } from "@/entities/news/model/newsSlice";
 import { useAppDispatch } from "@/app/appStore";
-import { useGetCategoriesQuery } from "@/entities/category/api/categoriesApi";
 import { Categories } from "@/features/categories";
 import { Search } from "@/features/search";
+import { CategoriesType } from "@/entities/category";
 
 interface Props {
   filters: IFilters;
+  categories: CategoriesType[];
 }
 
-const NewsFilters = ({ filters }: Props) => {
-  const { data: dataCategories } = useGetCategoriesQuery(null);
+const NewsFilters = ({ filters, categories }: Props) => {
   const dispatch = useAppDispatch();
 
   return (
     <div className={styles.filters}>
-      {dataCategories ? (
+      {categories ? (
         <Slider>
           <Categories
-            categories={dataCategories.categories}
+            categories={categories}
             setSelectedCategory={(category) => dispatch(setFilters({ key: "category", value: category }))}
             selectedCategory={filters.category}
           />
