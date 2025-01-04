@@ -2,11 +2,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
 import { rootReducer } from "./appReducer";
 import { newsApi } from "@/entities/news/api/newsApi";
-import { CategoriesApi } from "@/entities/category/api/categoriesApi";
+import { categoriesApi } from "@/entities/category/api/categoriesApi";
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(newsApi.middleware, CategoriesApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(newsApi.middleware, categoriesApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
